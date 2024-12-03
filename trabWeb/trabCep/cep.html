@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJgD2lU6P8uS5mCQbd6yw5aO7gq9pH7VZzqZZZ13HcfpzFtmcbPRGnx3NhfO" crossorigin="anonymous">
+    <!-- Link para o arquivo de estilo personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Consulta de CEP ou Rua</h1>
+        
+        <form id="cepForm" class="bg-white p-4 rounded shadow-sm">
+            <!-- Seleção do tipo de pesquisa -->
+            <div class="mb-3">
+                <label for="searchType" class="form-label">Pesquisar por:</label>
+                <select id="searchType" name="searchType" class="form-select">
+                    <option value="cep">CEP</option>
+                    <option value="street">Nome da Rua</option>
+                </select>
+            </div>
+
+            <!-- Seção de pesquisa por CEP -->
+            <div id="cepSection" class="search-section">
+                <label for="cep" class="form-label">CEP:</label>
+                <input type="text" id="cep" name="cep" class="form-control" placeholder="Digite o CEP" />
+            </div>
+
+            <!-- Seção de pesquisa por Nome da Rua -->
+            <div id="streetSection" class="search-section d-none">
+                <label for="street" class="form-label">Nome da Rua:</label>
+                <input type="text" id="street" name="street" class="form-control" placeholder="Digite o nome da rua" />
+            </div>
+
+            <!-- Campo para cidade -->
+            <div class="mb-3">
+                <label for="city" class="form-label">Cidade (PR):</label>
+                <input type="text" id="city" name="city" class="form-control" placeholder="Digite o nome da cidade" />
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100">Consultar</button>
+        </form>
+
+        <h2 class="mt-4">Resultado:</h2>
+        <pre id="result" class="bg-light p-3 rounded shadow-sm"></pre>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="cep.js"></script> <!-- Seu arquivo JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0w6uM54fY/F9BdptRma3FfsygE1UOe8jTQoPHe9G0xGi4J2w5" crossorigin="anonymous"></script>
+</body>
+</html>
