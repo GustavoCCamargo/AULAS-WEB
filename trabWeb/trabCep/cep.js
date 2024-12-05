@@ -5,6 +5,10 @@ const cidadesPR = [
     // Adicione mais cidades conforme necessário
 ];
 
+const select = document.getElementById("searchType")
+// select.onchange = 
+
+select.value
 
 // Função para consultar o CEP via ViaCEP API
 async function consultarCEP(cep) {
