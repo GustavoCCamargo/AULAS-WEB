@@ -84,10 +84,18 @@ $(document).ready(function () {
     // Função para alternar entre os campos de pesquisa
     $('#searchType').change(function () {
         var selectedValue = $(this).val();
-
+       
         if (selectedValue === 'cep') {
+            console.log("cep");
+            $('#streetSection').hide();
             $('#cepSection').show();
+
+        }else if (selectedValue === 'street') {
+            console.log("street");
+            $('#cepSection').hide();
+            $('#streetSection').show();
         }
+
     }
     )
 });     
